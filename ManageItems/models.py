@@ -6,3 +6,7 @@ class hwItems(models.Model):
     hwName=models.CharField(max_length=50)
     hwDescription=models.TextField(max_length=200)
     hwQty=models.SmallIntegerField
+
+class Auth(models.Model):
+    username=models.CharField(max_length=100)
+    password=models.CharField(max_length=100)

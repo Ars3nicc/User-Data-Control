@@ -6,3 +6,4 @@ def main(request):
 
 def aboutus(request):
     return render(request,'aboutus.html')
+    
