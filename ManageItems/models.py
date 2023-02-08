@@ -1,12 +1,9 @@
 from django.db import models
 
-# Create your models here.
-class hwItems(models.Model):
-    hwItems=models.SmallIntegerField(primary_key=True)
-    hwName=models.CharField(max_length=50)
-    hwDescription=models.TextField(max_length=200)
-    hwQty=models.SmallIntegerField
-
-class Auth(models.Model):
-    username=models.CharField(max_length=100)
-    password=models.CharField(max_length=100)
+class UserData(models.Model):
+    fname = models.CharField(max_length=50)
+    lname = models.CharField(max_length=50)
+    birth_date = models.DateField(blank=True, null=True)
+    
+    def __str__(self):
+        return self.lname

@@ -1,25 +1,49 @@
+
 {% load static %}
+
 <html lang="en">
 <head>
     <head>
-        <title>PRACTICE</title>
+        <title>Home</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{% static 'css/form.css' %}">
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     </head>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="./usertable">Users</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+    </nav>
 
 <body>
     <div class="main">
-        <div class="header">Practice Layout</div>
+        <div class="header">Hardware Inventory</div>
     </div>
+    
 
-    <form class="form" action="" method="POST">
-        <label for="uname">Username</label>
-        <input class="input" type="text" name="username" id="username">
-        <label for="passw">Password</label>
-        <input class="input" type="text" name="password" id="password">
+    <form class="form" action="/" method="POST">
+        {% csrf_token %}
+        <label for="uname">Item Name</label>
+        <input class="input" type="text" name="itemname" id="itemname">
+        <label for="passw">Item Type</label>
+        <input class="input" type="text" name="itemtype" id="itemtype">
+        <label for="uname">Quantity</label>
+        <input class="input" type="text" name="quantity" id="quantity">
+        <label for="passw">Amount</label>
+        <input class="input" type="text" name="amount" id="amount">
         <input class="submit" type="submit" value="Submit">
     </form>
+
+    <div>
+        <h1>
+
+        </h1>
+    </div>
+    
 
 </body>
 </html> 
