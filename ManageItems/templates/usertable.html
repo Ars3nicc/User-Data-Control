@@ -22,9 +22,9 @@
                 <td>{{users.lname}}</td>
                 <td>{{users.fname}}</td>
                 <td>{{users.birth_date}}</td>
-                <td><button class="btn btn-info">View</button></td>
-                <td><button class="btn btn-primary">Edit</button></td>
-                <td><button class="btn btn-danger">Delete</button></td>
+                <td><a href="/detail/{{users.id}}">View</a></td>
+                <td><a href="/update/{{users.id}}">Update</a></td>
+                <td><a href="/delete/{{users.id}}">Delete</a></td>
             </tr>
     
             {% endfor %}

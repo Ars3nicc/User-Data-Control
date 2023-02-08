@@ -63,3 +63,21 @@ def update_view(request, id):
     context["form"] = form
  
     return render(request, "update_user.html", context)
+
+def delete_view(request, id):
+    # dictionary for initial data with
+    # field names as keys
+    context ={}
+ 
+    # fetch the object related to passed id
+    obj = get_object_or_404(UserData, id = id)
+ 
+ 
+    if request.method =="POST":
+        # delete object
+        obj.delete()
+        # after deleting redirect to
+        # home page
+        return HttpResponseRedirect("")
+ 
+    return render(request, "delete_user.html", context)
