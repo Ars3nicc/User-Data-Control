@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('', include('ManageItems.urls')),
     path('aboutus/', include('ManageItems.urls')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+       path('json/',include('ManageItems.urls'))
 ]

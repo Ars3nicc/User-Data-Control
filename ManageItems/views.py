@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse,JsonResponse
 
 from django.shortcuts import (get_object_or_404,
                               render,
@@ -6,7 +7,7 @@ from django.shortcuts import (get_object_or_404,
 from .models import *
 from .forms import *
 
-# Create your views here.
+
 def main(request):
     return render(request,'index.html')
 
@@ -18,6 +19,7 @@ def usertable(request):
     user = UserData.objects.all()
     return render(request,'usertable.html', {'user': user})
 
+# CRUD OPERATION VIEWS --------------------------------
 def create_view(request):
     # dictionary for initial data with
     # field names as keys
@@ -27,6 +29,7 @@ def create_view(request):
     form = UserForm(request.POST or None)
     if form.is_valid():
         form.save()
+        return HttpResponseRedirect("/usertable")
          
     context['form']= form
     return render(request, "create_user.html", context)
@@ -72,12 +75,16 @@ def delete_view(request, id):
     # fetch the object related to passed id
     obj = get_object_or_404(UserData, id = id)
  
- 
     if request.method =="POST":
         # delete object
         obj.delete()
         # after deleting redirect to
         # home page
-        return HttpResponseRedirect("")
+        return HttpResponseRedirect("/")
  
     return render(request, "delete_user.html", context)
+#  ------------------------------------------------------------------
+# JSON View
+def json_view(request):
+    data=list(UserData.objects.values())
+    return JsonResponse(data,safe=False)
