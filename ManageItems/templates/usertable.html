@@ -24,13 +24,13 @@
         <header class="table-header">User Table View</header>
         <th>Last Name</th>
         <th>First Name</th>
-        <th>Birth Date</th>
+        <th>Date Created</th>
         <tbody>
             {% for users in user %}
             <tr>
                 <td>{{users.lname}}</td>
                 <td>{{users.fname}}</td>
-                <td>{{users.birth_date}}</td>
+                <td>{{users.date_created}}</td>
                 <td><a class="btn btn-info" href="/detail/{{users.id}}">View</a></td>
                 <td><a class="btn btn-primary" href="/update/{{users.id}}">Update</a></td>
                 <td><a class="btn btn-danger" href="/delete/{{users.id}}">Delete</a></td>

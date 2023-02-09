@@ -20,5 +20,5 @@ urlpatterns = [
     path('', include('ManageItems.urls')),
     path('aboutus/', include('ManageItems.urls')),
     path('admin/', admin.site.urls),
-       path('json/',include('ManageItems.urls'))
+    path('json/',include('ManageItems.urls'))
 ]

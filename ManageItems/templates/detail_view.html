@@ -22,12 +22,14 @@
         <form class="detail-form" action="">
             <header class="ui-header">User Information</header>
             <fieldset class="field-set">
+                <label for="">User ID</label>
+                <p class="user">{{ user.id }}</p>
                 <label for="">First Name:</label>
                 <p class="user">{{ user.fname }}</p>
                 <label for="">Last Name:</label>
                 <p class="user">{{ user.lname }}</p>
-                <label for="">Birth date</label>
-                <p class="user">{{ user.birth_date }}</p>
+                <label for="">Date Created</label>
+                <p class="user">{{ user.date_created }}</p>
             </fieldset>
             <a class="btn btn-success" href="/usertable">Return</a>
 

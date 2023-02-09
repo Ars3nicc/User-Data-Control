@@ -14,5 +14,5 @@ class UserForm(forms.ModelForm):
         fields = [
             "fname",
             "lname",
-            "birth_date"
+            "date_created"
         ]
