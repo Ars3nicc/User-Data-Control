@@ -23,4 +23,15 @@ ul {
     text-decoration: none;
     color: white;
   }
-  
+
+  .auth{
+    float: right;
+    margin-right: 5vh;
+  }
+
+  .img  {
+    height: auto;
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 5vh;
+  }

@@ -1,5 +1,5 @@
-{% load static %}
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/detail.css' %}">
     <title>User View</title>
 </head>
 
@@ -22,13 +22,11 @@
         <form class="detail-form" action="">
             <header class="ui-header">User Information</header>
             <fieldset class="field-set">
-                <label for="">User ID</label>
-                <p class="user">{{ user.id }}</p>
-                <label for="">First Name:</label>
+                <label for="" class="label">First Name:</label>
                 <p class="user">{{ user.fname }}</p>
-                <label for="">Last Name:</label>
+                <label for="" class="label">Last Name:</label>
                 <p class="user">{{ user.lname }}</p>
-                <label for="">Date Created</label>
+                <label for="" class="label">Date Created</label>
                 <p class="user">{{ user.date_created }}</p>
             </fieldset>
             <a class="btn btn-success" href="/usertable">Return</a>
