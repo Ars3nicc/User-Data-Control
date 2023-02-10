@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter';
-
 }
 .main-header{
     font-size: 2rem;
@@ -16,8 +15,6 @@
     display: flex;
     justify-content: center;
     gap: 20vh;
-
-
 }
 #c1{
     background: #0F3460;
@@ -30,16 +27,37 @@
 }
 .card{
     margin-top: 5vh;
-    padding: 2vh;
     box-shadow: 10px 10px  #E94560;
 }
 
 .user-no{
+    padding: 1vh;
     font-size: 2.5rem;
     font-weight: bold;
+    text-transform: uppercase;
     color: #ffff;
 
 }
+#ul2{
+    background-color: #D96A4B;
+}
+#ul3{
+    background-color: #7A73D0;
+}
+
+.user-link{
+    padding: 5px;
+    background: #234F84;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.user-link:hover{
+    color: #ffff;
+    text-decoration: none;;
+}
+
 
 .user-no-title{
     font-size: 1rem;
@@ -56,6 +74,11 @@
 }
 
 .btn-set{
-    display: block;
+
+}
+.btn-set a{
+    padding: 2vh;
+    margin-top: 3vh;
+    display: block; 
 }
 

@@ -24,7 +24,17 @@ def aboutus(request):
 def usertable(request):
     total= UserData.objects.count()
     user = UserData.objects.all()
-    return render(request,'usertable.html', {'user': user, 'total': total})
+    return render(request,'usertable.html', {'user': user})
+
+def student_table(request):
+    student = UserData.objects.filter(category='Student').all()
+
+    return render(request,'student_table.html', {'student': student})
+
+def teacher_table(request):
+    teacher = UserData.objects.filter(category='Teacher').all()
+
+    return render(request,'teacher_table.html', {'teacher': teacher})
 
 # def login_usere(request):
 #     if request.method == 'POST':
@@ -57,11 +67,8 @@ def create_view(request):
     return render(request, "create_user.html", context)
 
 def detail_view(request, id):
-    # dictionary for initial data with
-    # field names as keys
     context ={}
-  
-    # add the dictionary during initialization
+
     context["user"] = UserData.objects.get(id = id)
           
     return render(request, "detail_view.html", context)
@@ -73,6 +80,7 @@ def update_view(request, id):
     context ={}
  
     # fetch the object related to passed id
+    user = UserData.objects.all()
     obj = get_object_or_404(UserData, id = id)
  
     # pass the object as instance in form

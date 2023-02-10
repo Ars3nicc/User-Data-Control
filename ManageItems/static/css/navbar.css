@@ -1,3 +1,4 @@
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -23,7 +24,6 @@ ul {
     text-decoration: none;
     color: white;
   }
-
   .auth{
     float: right;
     margin-right: 5vh;

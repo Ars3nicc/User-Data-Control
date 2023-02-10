@@ -20,7 +20,7 @@
       </ul>
 </nav>
 <body>
-    <header class="table-header">Registered Users</header>
+    <header class="table-header">Student Registry</header>
     <div class="body">
         <table class="table table-hover">
             <thead class="theader">
@@ -32,16 +32,16 @@
                 <th style="text-align: center;" colspan="3">Select Option</th>
             </thead>
             <tbody>
-                {% for users in user %}
+                {% for std in student %}
                 <tr>
-                    <td>A1{{users.id}}</td>
-                    <td>{{users.category}}</td>
-                    <td>{{users.lname}}</td>
-                    <td>{{users.fname}}</td>
-                    <td>{{users.date_created}}</td>
-                    <td><a class="btn btn-success" href="/detail/{{users.id}}">View</a></td>
-                    <td><a class="btn btn-primary" href="/update/{{users.id}}">Update</a></td>
-                    <td><a class="btn btn-danger" href="/delete/{{users.id}}">Delete</a></td>
+                    <td>A1{{std.id}}</td>
+                    <td>{{std.category}}</td>
+                    <td>{{std.lname}}</td>
+                    <td>{{std.fname}}</td>
+                    <td>{{std.date_created}}</td>
+                    <td><a class="btn btn-success" href="/detail/{{std.id}}">View</a></td>
+                    <td><a class="btn btn-primary" href="/update/{{std.id}}">Update</a></td>
+                    <td><a class="btn btn-danger" href="/delete/{{std.id}}">Delete</a></td>
                 </tr>
         
                 {% endfor %}

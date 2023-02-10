@@ -28,8 +28,4 @@ class UserForm(forms.ModelForm):
         # specify model to be used
         model = UserData
         # specify fields to be used
-        fields = [
-            "fname",
-            "lname",
-            "date_created"
-        ]
+        fields = '__all__'

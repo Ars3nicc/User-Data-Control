@@ -4,11 +4,6 @@ from .utils import custom_id
 from django.contrib.auth.forms import UserCreationForm
 
 
-class Authentication(models.Model):
-    uname = models.CharField(max_length=50, verbose_name='Enter Username'),
-    password = models.CharField(max_length=50, verbose_name='Enter Password')
-    def __str__(self):
-        return self.username
 
 class UserData(models.Model):
     CATEGORY_CHOICES = [
