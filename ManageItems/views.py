@@ -24,7 +24,7 @@ def aboutus(request):
 def usertable(request):
     total= UserData.objects.count()
     user = UserData.objects.all()
-    return render(request,'usertable.html', {'user': user})
+    return render(request,'usertable.html', {'user': user, 'total': total})
 
 def student_table(request):
     student = UserData.objects.filter(category='Student').all()
