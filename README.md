@@ -10,6 +10,5 @@ python manage.py runserver
 Username: `admin`
 Password: `admin`
 >Note that this project is for practice only to understand the fundamental concepts of Django Framework
-### Screenshots
-![Screenshots](image.png)
+
 Check out my portfolio for more information
