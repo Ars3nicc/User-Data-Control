@@ -1,7 +1,10 @@
 # User Information Controller
 This application uses Django framework to manage the user data management. This also implements CRUD operations to fully control the information of users inside the interface.
 
-To run the system follow the command(s) below:
+**To run the system:**
 ```
 python manage.py runserver
 ```
+>Note that this project is for practice only to understand the fundamental concepts of Django Framework
+
+Check out my portfolio for more information

@@ -6,6 +6,11 @@
     box-sizing: border-box;
     font-family: 'Inter';
 }
+.title-header{
+    font-size: 3rem;
+    color: #292b2c;
+    text-shadow: 2px 2px 0px #F94A29;
+}
 .main-header{
     font-size: 2rem;
     font-weight: bold;
@@ -29,12 +34,17 @@
     width: 100%;
     display: flex;
     gap: 5vh;
-    
     margin-bottom: 5vh;
 }
 .card{
     margin-top: 5vh;
-    box-shadow: 15px 15px  #CBCBCB;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px  #B9B9B9;
+}
+
+.card:hover{
+    transition: .4s;
 }
 
 .user-no{
@@ -42,6 +52,9 @@
     font-size: 2.5rem;
     text-transform: uppercase;
     color: #ffff;
+}
+.user-count{
+    font-weight: bold;
 }
 
 .user-no-title{
@@ -89,19 +102,40 @@
 
 
 .section-header{
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .title-header{
     font-weight: bold;
     font-size: 2rem;
+    text-transform: uppercase;
     padding: 2vh;
 }
 
 
 .btn-set a{
     padding: 2vh;
-    margin-top: 3vh;
+    margin-top: 2vh;
     display: block; 
+}
+
+.main-footer{
+    text-align: center;
+    color: #fcc;
+    position: relative;
+    margin-top: 5vh;
+    background-color: #292b2c;
+    width: 100%;
+    height: 100px;
+}
+
+.footer-header{
+    padding: 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.footer-contact{
+    color: #ffff;
 }
 

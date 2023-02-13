@@ -3,6 +3,9 @@ from datetime import date
 from .utils import custom_id
 from django.contrib.auth.forms import UserCreationForm
 
+class Auth(models.Model):
+    uname = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
 
 
 class UserData(models.Model):

@@ -29,12 +29,12 @@
 <body>
     <div class="main">
         <section class="title">
-            <div class="title-header">Number of Users</div>
+            <div class="title-header">Welcome!</div>
 
             <div class="card-container">
                 <div class="card" id="c1">
                     <div class="user-no">
-                        <p class="user-no">{{total}}</p>
+                        <p class="user-count">{{total}}</p>
                         <i class='bx bxs-user'></i>
                         <p class="user-no-title">Total Number of Users</p>
                     </div>
@@ -42,14 +42,14 @@
                 </div>
                 <div class="card" id="c2">
                     <div class="user-no">
-                        <p class="user-no">{{students}}</p>
+                        <p class="user-count">{{students}}</p>
                         <p class="user-no-title">Registered Students</p>
                     </div>
                     <a class="user-link" id="ul2" href="/stdtable">More Info</a>
                 </div>
                 <div class="card" id="c3">
                     <div class="user-no">
-                        <p class="user-no">{{teachers}}</p>
+                        <p class="user-count">{{teachers}}</p>
                         <p class="user-no-title">Registered Teachers</p>
                     </div>
                     <a class="user-link" id="ul3" href="/tchtable">More Info</a>
@@ -62,12 +62,18 @@
             <header class="section-header">Select Option:</header>
             <div class="btn-set">
                 <a class="btn btn-primary" href="/create">Add User</a>
-                <a class="btn btn-primary" href="/usertable">View User</a>
+                <!-- <a class="btn btn-primary" href="/usertable">View User</a> -->
                 <img class="sect-img" src="{% static 'img/suisei.jpg' %}" alt="suisei">
             </div>
         </section>
     </div>
 
 </body>
+<footer class="main-footer">
+    <header class="footer-header">Contact Me</header>
+    <div class="footer-contact">
+        <p>franzmanrique2121@gmail.com</p>
+    </div>
+</footer>
 
 </html>
