@@ -5,6 +5,10 @@ This application uses Django framework to manage the user data management. This 
 ```
 python manage.py runserver
 ```
+
+### Admin Superuser Account
+Username: `admin`
+Password: `admin`
 >Note that this project is for practice only to understand the fundamental concepts of Django Framework
 
 Check out my portfolio for more information
