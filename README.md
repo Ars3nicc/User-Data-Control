@@ -19,13 +19,21 @@ python manage.py runserver
 You will need to create an admin account in order to access the Django admin server
 #### In this case, it's located in the URL
 ```path('accounts/', include('django.contrib.auth.urls')),```
-Follow this quick steps to create an admin account
+>Follow this quick steps to create an admin account
+---
+Initiating create superuser
+```python manage.py createsuperuser```
+Creating Username
+```Username: admin```
+Input Email Address, though it can be OPTIONAL (hit ENTER to skip creating email address)
+```Email address: // Skip this if you want to```
+Creating Password
 ```
-python manage.py createsuperuser
-Username: admin
-Email address: // Skip this if you want to
 Password: admin
 Password (again): admin
+```
+Bypassing Validation of Password
+```
 Bypass password validation and create user anyway? [y/n]: y // Select YES
 ```
 >Note that this project is for practice only to understand the fundamental concepts of Django Framework
