@@ -15,7 +15,7 @@ def main(request):
     total= UserData.objects.count()
     teachers = UserData.objects.filter(category='Teacher').count()
     students = UserData.objects.filter(category='Student').count()
-    return render(request,'index.html', {'total': total, 'teachers':teachers, 'students':students})
+    return render(request,'main.html', {'total': total, 'teachers':teachers, 'students':students})
 
 
 def aboutus(request):
@@ -24,17 +24,17 @@ def aboutus(request):
 def usertable(request):
     total= UserData.objects.count()
     user = UserData.objects.all()
-    return render(request,'usertable.html', {'user': user, 'total': total})
+    return render(request,'views/usertable.html', {'user': user, 'total': total})
 
 def student_table(request):
     student = UserData.objects.filter(category='Student').all()
 
-    return render(request,'student_table.html', {'student': student})
+    return render(request,'views/student_table.html', {'student': student})
 
 def teacher_table(request):
     teacher = UserData.objects.filter(category='Teacher').all()
 
-    return render(request,'teacher_table.html', {'teacher': teacher})
+    return render(request,'views/teacher_table.html', {'teacher': teacher})
 
 # def login_usere(request):
 #     if request.method == 'POST':
@@ -64,14 +64,14 @@ def create_view(request):
         form.save()
         return HttpResponseRedirect("/usertable")
     context['form']= form
-    return render(request, "create_user.html", context)
+    return render(request, "views/create_user.html", context)
 
 def detail_view(request, id):
     context ={}
 
     context["user"] = UserData.objects.get(id = id)
           
-    return render(request, "detail_view.html", context)
+    return render(request, "views/detail_view.html", context)
  
 # update view for details
 def update_view(request, id):
@@ -95,7 +95,7 @@ def update_view(request, id):
     # add form dictionary to context
     context["form"] = form
  
-    return render(request, "update_user.html", context)
+    return render(request, "views/update_user.html", context)
 
 def delete_view(request, id):
     # dictionary for initial data with
@@ -112,7 +112,7 @@ def delete_view(request, id):
         # home page
         return HttpResponseRedirect("/usertable")
  
-    return render(request, "delete_user.html", context)
+    return render(request, "views/delete_user.html", context)
 #  ------------------------------------------------------------------
 # JSON View
 def json_view(request):

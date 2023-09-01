@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+<div>
+    <header class="table-header">Teacher Registry</header>
+    <div class="body">
+        <table class="table table-hover">
+            <thead class="theader">
+                <th>UID</th>
+                <th>Category</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Date Registered</th>
+                <th style="text-align: center;" colspan="3">Select Option</th>
+            </thead>
+            <tbody>
+                {% for tch in teacher %}
+                <tr>
+                    <td>A1{{tch.id}}</td>
+                    <td>{{tch.category}}</td>
+                    <td>{{tch.lname}}</td>
+                    <td>{{tch.fname}}</td>
+                    <td>{{tch.date_created}}</td>
+                    <td><a class="btn btn-success" href="/detail/{{tch.id}}">View</a></td>
+                    <td><a class="btn btn-primary" href="/update/{{tch.id}}">Update</a></td>
+                    <td><a class="btn btn-danger" href="/delete/{{tch.id}}">Delete</a></td>
+                </tr>
+        
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div> 
+{% endblock content %}
+    

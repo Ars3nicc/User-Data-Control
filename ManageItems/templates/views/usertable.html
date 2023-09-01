@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+<div>
+    <header class="table-header">Registered Users</header>
+    <div class="body">
+        <table class="table table-hover">
+            <thead class="theader">
+                <th>UID</th>
+                <th>Category</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Date Registered</th>
+                <th style="text-align: center;" colspan="3">Select Option</th>
+            </thead>
+            <tbody>
+                {% for users in user %}
+                <tr>
+                    <td>A1{{users.id}}</td>
+                    <td>{{users.category}}</td>
+                    <td>{{users.lname}}</td>
+                    <td>{{users.fname}}</td>
+                    <td>{{users.date_created}}</td>
+                    <td><a class="btn btn-success" href="/detail/{{users.id}}">View</a></td>
+                    <td><a class="btn btn-primary" href="/update/{{users.id}}">Update</a></td>
+                    <td><a class="btn btn-danger" href="/delete/{{users.id}}">Delete</a></td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock content %}

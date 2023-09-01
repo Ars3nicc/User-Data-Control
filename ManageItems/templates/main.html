@@ -1,79 +1,68 @@
+{% extends 'index.html' %}
 {% load static %}
-<html>
 
-<head>
-    <title>Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
 
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
-</head>
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="./usertable">Users</a></li>
-        <li><a href="/aboutus">About</a></li>
-        <div class="auth">
-            <img class="img" src="{% static 'img/avatar.jpg' %}" alt="avatar">
-            <a class="btn btn-danger" href="">Sign Out</a>
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<div class="container-fluid">
+  <header class="main-hdr">Dashboard</header>
+  <div class="col">
+    <section class="p-3">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>{{total}}</h3>
+
+                <p>Total Users Registered</p>
+              </div>
+              <div class="icon">
+                <i class='bx bx-user'></i>
+              </div>
+              <a href="/usertable" class="small-box-footer">More info <i class='bx bxs-right-arrow-circle' ></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{students}}</h3>
+
+                <p>Students Registered</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="/stdtable" class="small-box-footer">More info <i class='bx bxs-right-arrow-circle' ></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>{{teachers}}</h3>
+
+                <p>Teachers Registered</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="/tchtable" class="small-box-footer">More info <i class='bx bxs-right-arrow-circle' ></i></a>
+            </div>
+          </div>
+          
 
         </div>
-    </ul>
-</nav>
+      </div>
+    </section>
 
 
-<body>
-    <div class="main">
-        <section class="title">
-            <div class="title-header">Welcome!</div>
-
-            <div class="card-container">
-                <div class="card" id="c1">
-                    <div class="user-no">
-                        <p class="user-count">{{total}}</p>
-                        <i class='bx bxs-user'></i>
-                        <p class="user-no-title">Total Number of Users</p>
-                    </div>
-                    <a class="user-link" id="ul1" href="/usertable">More Info</a>
-                </div>
-                <div class="card" id="c2">
-                    <div class="user-no">
-                        <p class="user-count">{{students}}</p>
-                        <p class="user-no-title">Registered Students</p>
-                    </div>
-                    <a class="user-link" id="ul2" href="/stdtable">More Info</a>
-                </div>
-                <div class="card" id="c3">
-                    <div class="user-no">
-                        <p class="user-count">{{teachers}}</p>
-                        <p class="user-no-title">Registered Teachers</p>
-                    </div>
-                    <a class="user-link" id="ul3" href="/tchtable">More Info</a>
-                </div>
-            </div>
-
-
-        </section>
-        <section>
-            <header class="section-header">Select Option:</header>
-            <div class="btn-set">
-                <a class="btn btn-primary" href="/create">Add User</a>
-                <!-- <a class="btn btn-primary" href="/usertable">View User</a> -->
-                <img class="sect-img" src="{% static 'img/suisei.jpg' %}" alt="suisei">
-            </div>
-        </section>
-    </div>
-
-</body>
-<footer class="main-footer">
-    <header class="footer-header">Contact Me</header>
-    <div class="footer-contact">
-        <p>franzmanrique2121@gmail.com</p>
-    </div>
-</footer>
-
-</html>
+  </div>
+</div>
+{% endblock content %}
+  

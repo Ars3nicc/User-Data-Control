@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+<div>
+    <header class="table-header">Student Registry</header>
+    <div class="body">
+        <table class="table table-hover">
+            <thead class="theader">
+                <th>UID</th>
+                <th>Category</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Date Registered</th>
+                <th style="text-align: center;" colspan="3">Select Option</th>
+            </thead>
+            <tbody>
+                {% for std in student %}
+                <tr>
+                    <td>A1{{std.id}}</td>
+                    <td>{{std.category}}</td>
+                    <td>{{std.lname}}</td>
+                    <td>{{std.fname}}</td>
+                    <td>{{std.date_created}}</td>
+                    <td><a class="btn btn-success" href="/detail/{{std.id}}">View</a></td>
+                    <td><a class="btn btn-primary" href="/update/{{std.id}}">Update</a></td>
+                    <td><a class="btn btn-danger" href="/delete/{{std.id}}">Delete</a></td>
+                </tr>
+        
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock content %}
+    

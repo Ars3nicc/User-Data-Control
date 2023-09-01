@@ -1,39 +1,5 @@
-.background{
-  background-color: #205E61;
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #20262E;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {  
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #F99417;
-    text-decoration: none;
-    color: white;
-  }
-  .auth{
-    float: right;
-    margin-right: 5vh;
-  }
-
-  .img  {
-    height: auto;
-    width: 50px;
-    border-radius: 100%;
-    margin-right: 5vh;
-  }
