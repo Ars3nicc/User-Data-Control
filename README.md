@@ -22,11 +22,17 @@ You will need to create an admin account in order to access the Django admin ser
 >Follow this quick steps to create an admin account
 ---
 Initiating create superuser
-```python manage.py createsuperuser```
+```
+python manage.py createsuperuser
+```
 Creating Username
-```Username: admin```
+```
+Username: admin
+```
 Input Email Address, though it can be OPTIONAL (hit ENTER to skip creating email address)
-```Email address: // Skip this if you want to```
+```
+Email address: // Skip this if you want to
+```
 Creating Password
 ```
 Password: admin
